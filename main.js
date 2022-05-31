@@ -37,3 +37,21 @@ console.log(from80.length);
 const last10 = companies.filter(comp => comp.end-comp.start >= 10);
 
 console.log(last10);
+
+//map
+const companyNames = companies.map(comp => `${comp.name} [${comp.start} - ${comp.end}]`);
+
+console.log(companyNames); 
+
+//Find sqrroot of ages
+const sqrRootAge = ages.map(age => Math.sqrt(age));
+
+console.log(sqrRootAge);
+
+//Sort
+const sortedComp = companies.sort((a,b) => (a.start > b.start ? 1 : -1) );
+console.log(sortedComp);
+
+//Sort ages
+const sortAges = ages.sort( (a,b) => (a - b) );
+console.log(sortAges);
