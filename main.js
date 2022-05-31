@@ -55,3 +55,21 @@ console.log(sortedComp);
 //Sort ages
 const sortAges = ages.sort( (a,b) => (a - b) );
 console.log(sortAges);
+
+//Reduce
+const addAges = ages.reduce( (total, age) => total + age, 0);
+console.log(addAges);
+
+//Total years in all companies
+const rangeOfComp = companies.reduce( (total, comp) => (total + (comp.end-comp.start)), 0 );
+console.log(rangeOfComp);
+
+//Combine all functions
+
+const combine = ages
+    .map(age => age * 2)
+    .filter(age => age >= 40)
+    .sort( (a,b) => a -b )
+    .reduce( (a,b) => a+b, 0)
+
+console.log(combine);
